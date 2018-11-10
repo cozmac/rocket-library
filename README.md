@@ -1,3 +1,0 @@
-# rocketLib
-
-Proiect tehnologii web
