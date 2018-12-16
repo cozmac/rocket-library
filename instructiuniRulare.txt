@@ -1,0 +1,84 @@
+1. Pentru a crea tabelele din baza de date rocketLibrary se da get pe link/create(exemplu: https://seminar-tw68-cozmacristian97.c9users.io/create)
+
+2. Pentru a vedea toate cartile disponibile la un moment dat: se da get pe link/gbooks
+(exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks)
+
+3. Pentru a se adauga o noua carte se da post pe link/gbooks (exemplu link: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/) si in sectiunea body - raw - JSON se vor introduce valorile pentru fiecare atribut
+Exemplu:
+{
+	"title": "titluTest",
+	"author": "autorTest",
+	"ISBN": 101010101010,
+	"category": "categorieTest"
+}
+
+4. Pentru a accesa o carte cu un anumit id se da get pe link/gbooks/id (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/1)
+
+5. Pentru a modifica atributele unei carti se poate da PUT pe link/gbooks/id (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/1), iar la sectiunea body - raw - JSON se vor introduce valorile noi.
+Exemplu:
+{
+	"title": "titluModificat"
+}
+
+6. Pentru a sterge o anumita carte se da DELETE pe link/gbooks/id (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/1)
+
+7. Pentru a lua autorii unei anumite carti se da get pe link/gbooks/id/authors (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/1/authors)
+
+8. Pentru a crea un nou autor pentru o anumita carte se da post pe link/gbooks/id/authors( exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/3/authors) si in sectiunea body - raw - JSON se adauga valorile pentru atributele tabelei Author
+Exemplu:
+{
+	"name": "RINDI",
+	"language": "hindi",
+	"gBookId": 3
+}
+
+9. Pentru a modifica atributele unui autor pentru o anumita carte se da PUT pe link/gbooks/id/authors/idA (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/3/authors/5), iar in body - raw - JSON se vor introduce noile valori.
+Exemplu:
+{
+    "name": "changed",
+      "language": "changed",
+      "gBookId": 3
+    
+}
+
+10. Pentru a sterge un autor pentru o anumita carte se va da DELETE pe link/gbooks/id/authors/idA (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/3/authors/5)
+
+11. Pentru a verifica ce rating-uri are o anumita carte se da get pe link/gbooks/id/ratings. (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/2/ratings)
+
+12. Pentru a adauga un nou rating pentru o anumita carte se da post pe link/gbooks/id/ratings (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/2/ratings), iar la body - raw - JSON
+Exemplu:
+{
+	"gBookId": 2,
+	"description": "Super carte",
+	"grade": 10
+}
+
+13. Pentru a modifica un anumit rating pentru o anumita carte se da put pe link/gbooks/id/ratings/idR(exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/2/ratings/2) si in body - raw - JSON se vor introduce noile valori.
+Exemplu:
+{
+    "description": "changed",
+    "grade": 6
+}
+
+14. Pentru a sterge un anumit rating pentru o anumita carte se da DELETE pe link/gbooks/id/ratings/idR(exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/2/ratings/2)
+
+15. Pentru a adauga un nou user pentru o anumita carte se da post pe link/gbooks/id/users (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/2/users), iar la body - raw - JSON se adauga atributele.
+Exemplu:
+{
+	"gBookId": 2,
+	"name": "User-Test",
+	"email": "usertest@gmail.com"
+}
+
+16. Pentru a verifica userii care detin o anumita carte se da get pe link/gbooks/id/users (exemplu : https://seminar-tw68-cozmacristian97.c9users.io/gbooks/2/users)
+
+17.Pentru a modifica valorile atributelor pentru un anumit user se va da put pe link/gbooks/id/users/idU (exemplu: https://seminar-tw68-cozmacristian97.c9users.io/gbooks/2/users/1) si in body - raw - JSON valorile pentru noile atribute.
+Exemplu:
+
+{
+    "name": "User-Changed",
+    "email": "userchanged@gmail.com"
+}
+
+
+18. Pentru a sterge un anumit user pentru o carte anume se va da DELETE pe link/gbooks/id/users/idU. Exemplu(https://seminar-tw68-cozmacristian97.c9users.io/gbooks/2/users/1)
