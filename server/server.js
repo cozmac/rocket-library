@@ -100,7 +100,7 @@ gBook.hasMany(User)
 
 const app = express()
 app.use(bodyParser.json())
-app.use(express.static('../simple-app/build'))
+app.use(express.static('../rocket-app/build'))
 
 app.get('/create', async (req, res) => {
 	try{
@@ -373,8 +373,8 @@ app.post('/gbooks/:id/users', async (req, res) => {
 	try {
 		let gbook = await gBook.findById(req.params.id)
 		if (gbook){
-			let users= req.body
-			users.bookId = gbook.id
+			let users = req.body
+			users.gBookId = gbook.id
 			await User.create(users)
 			res.status(201).json({message : 'The user has been created'})
 		}

@@ -1,0 +1,50 @@
+body{
+    background-image: url("../library.jpeg");
+    background-size: cover;
+}
+
+div{
+    color: Moccasin;
+    font-size:  20px;
+}
+
+h1
+{
+    color: DodgerBlue;
+    font-size:60px;
+    font-family: sans-serif;
+    background-color: grey;
+    font-style: oblique;
+}
+
+button
+{
+    alignment-baseline: central;
+    border-radius: 12px;
+    color: LightSkyBlue;
+    background-color: grey;
+}
+
+form
+{
+    background-size: auto;
+    color: Moccasin;
+    font-weight: bold;
+}
+
+.search-wrapper
+{
+    text-align:center;
+}
+
+.addList
+{
+    float: right;
+}
+
+h2
+{
+    text-align: center;
+    color: coral;
+    font-size: 48px;
+}
